@@ -384,6 +384,7 @@
 "Assets/scripts/Bounce.cs"
 "Assets/scripts/PlayerMovement.cs"
 "Assets/scripts/RandomlySpawn.cs"
+"Assets/scripts/Timer.cs"
 -langversion:9.0
 
 /deterministic
