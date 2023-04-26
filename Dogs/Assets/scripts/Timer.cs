@@ -8,8 +8,12 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 60f;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI messageText;
-
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+    public AudioClip backgroundClip;
+    
     private bool isTimerRunning = true;
+    private bool playedSound = false;
 
     void Update()
     {
@@ -19,13 +23,22 @@ public class Timer : MonoBehaviour
             {
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
+                
+                if (!playedSound && timeRemaining <= 15f)
+                {
+                    playedSound = true;
+                    audioSource.PlayOneShot(audioClip);
+                }
             }
             else
             {
                 isTimerRunning = false;
                 timeRemaining = 0;
                 DisplayTime(timeRemaining);
-                messageText.text = "All those old dogs you put in the truck are being sent off to a kill shelter but you only cared for the points.";
+                messageText.text = "Time's up!";
+                audioSource.Stop();
+                audioSource.clip = backgroundClip;
+                audioSource.Play();
             }
         }
     }
