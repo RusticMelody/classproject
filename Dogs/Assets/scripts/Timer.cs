@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TextMeshProUGUI;
 using TMPro;
 
 public class Timer : MonoBehaviour
 {
     public float timeRemaining = 60f;
-    public Text timerText;
+    public TextMeshProUGUI timerText;
 
     void Update()
     {

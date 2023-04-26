@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pickup
+  - Young
+  - NPC
+  - Truck
+  - Old
   layers:
   - Default
   - TransparentFX
