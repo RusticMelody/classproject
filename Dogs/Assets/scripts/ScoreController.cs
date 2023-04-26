@@ -11,7 +11,7 @@ public class ScoreController : MonoBehaviour
         if (collision.gameObject.CompareTag("Young") && transform.CompareTag("NPC"))
         {
             score++;
-            scoreText.text = "Score: " + score.ToString();
+            scoreText.text = "Small Dog: " + score.ToString();
             Destroy(collision.gameObject);
         }
     }

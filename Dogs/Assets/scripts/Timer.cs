@@ -7,18 +7,26 @@ public class Timer : MonoBehaviour
 {
     public float timeRemaining = 60f;
     public TextMeshProUGUI timerText;
+    public TextMeshProUGUI messageText;
+
+    private bool isTimerRunning = true;
 
     void Update()
     {
-        if (timeRemaining > 0)
+        if (isTimerRunning)
         {
-            timeRemaining -= Time.deltaTime;
-            DisplayTime(timeRemaining);
-        }
-        else
-        {
-            timeRemaining = 0;
-            Debug.Log("Time's up!");
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+                DisplayTime(timeRemaining);
+            }
+            else
+            {
+                isTimerRunning = false;
+                timeRemaining = 0;
+                DisplayTime(timeRemaining);
+                messageText.text = "All those old dogs you put in the truck are being sent off to a kill shelter but you only cared for the points.";
+            }
         }
     }
 
