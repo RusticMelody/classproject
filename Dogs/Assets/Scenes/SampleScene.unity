@@ -722,7 +722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed03d2444a231c24a90b299bd0275374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 20
+  timeRemaining: 60
   timerText: {fileID: 492689929}
   messageText: {fileID: 829239854}
   audioSource: {fileID: 592471964}

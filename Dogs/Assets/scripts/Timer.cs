@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
                 isTimerRunning = false;
                 timeRemaining = 0;
                 DisplayTime(timeRemaining);
-                messageText.text = "Time's up!";
+                messageText.text = "All of those dogs on the truck were taken to be put down, but you enjoyed getting the points right?";
                 audioSource.Stop();
                 audioSource.clip = backgroundClip;
                 audioSource.Play();
